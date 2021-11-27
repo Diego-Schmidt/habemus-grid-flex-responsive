@@ -14,9 +14,75 @@ body{
 }
 
 header {
-	background: #F2B33D;
 	width: 100%;
 	clear: both;
 	height: 20px;
 	display: table;
+}
+
+.header {
+    background: #F2B33D;
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    justify-content: center;
+}
+
+.nav{
+    width: 90%;
+}
+.burger{
+    display: none;
+}
+.nav__menu{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 18px;
+}
+.nav__menu a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+.nav__social{
+    padding-left: 1rem;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slideshow{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+	padding-top: 30px;
+}
+
+.centrado{
+    background-color: rgba(255, 174, 0, 0.6);
+	position: absolute;
+    width:100%;
+	top: 70%;
+    left: 50%;
+	color: cornsilk;
+	font-size: 2rem;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 824px) {
+    .nav__menu {
+      display: none;
+    }
+    .burger{
+        display: inline-flex;
+    }
+    .centrado{
+        font-size: 1rem;
+    }
   }
