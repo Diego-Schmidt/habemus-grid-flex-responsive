@@ -29,6 +29,79 @@ header {
     justify-content: center;
 }
 
+/* Entrada animada logo */
+
+.logo-left{
+    -webkit-animation: logo-left 3s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: logo-left 3s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    
+}
+
+/* keyframes para la animación del logo*/
+
+ @-webkit-keyframes logo-left {
+    0% {
+      -webkit-transform: translateX(-1000px) rotate(-720deg);
+              transform: translateX(-1000px) rotate(-720deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes .logo-left {
+    0% {
+      -webkit-transform: translateX(-1000px) rotate(-720deg);
+              transform: translateX(-1000px) rotate(-720deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+
+/* fin keyframes animación logo */
+
+/* Animación para imágenes grandes en portada */
+
+.fade-in-imagenes {
+	-webkit-animation: fade-in-imagenes 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-imagenes 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+/* keyframes para la animación de imagenes en portada*/
+
+@-webkit-keyframes fade-in-imagenes {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in-imagenes {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+/* fin animación imágenes portada */
+
 .nav{
     width: 90%;
 }
@@ -52,7 +125,7 @@ header {
 }
 
 main{
-    display: flex;
+ /*   display: flex; */
     align-items: center;
     justify-content: center;
 }
@@ -75,7 +148,122 @@ main{
     transform: translate(-50%, -50%);
 }
 
-@media (max-width: 824px) {
+.app{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+	padding: 30px 0 30px 0;
+}
+
+.textoapp{
+    background-color: rgba(87, 83, 76, 0.459);
+	position: absolute;
+    width:30%;
+	height: 30%;
+	overflow: hidden;
+	top: 40%;
+    left: 60%;
+	color: white;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 1.5rem;
+}
+
+/* ========================
+      Botones
+========================
+*/
+.nav__links {
+  color: #FFF;
+  transition: all 0.3s;
+  position: relative;
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+ /* width: 250px; */
+  cursor: pointer;
+  
+}
+
+.nav__links span {
+  transition: all 0.3s;
+}
+.nav__links::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgb(255, 115, 0);
+  border-bottom-color: rgb(255, 115, 0);
+  transform: scale(0.1, 1);
+}
+.nav__links:hover span {
+  letter-spacing: 2px;
+  background-color: rgb(241, 131, 4);
+}
+.nav__links:hover::before {
+  opacity: 1; 
+  transform: scale(1, 1); 
+}
+.nav__links::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255, 115, 0, 0);
+}
+.nav__links:hover::after {
+  opacity: 0; 
+  transform: scale(0.1, 1);
+}
+
+/* Definimos al footer como grid */
+
+footer {
+    display: grid; 
+    background: #F28907;
+    font-size: 0.5;
+    grid-template-columns: 1.3fr 0.7fr; 
+    grid-template-rows: 0.4fr 2.3fr 0.3fr; 
+    gap: 7px 7px; 
+    height: 60px;
+    grid-template-areas: 
+      ". ."
+      ". ."
+      "footer1 footer2"; 
+  }
+  .footer1 { 
+    grid-area: footer1; 
+   /* justify-content: space-evenly */
+    align-items: center;
+    justify-content: center;
+    }
+   .socmob{
+       display: none;
+   } 
+  .footer2 {
+    grid-area: footer2; 
+  /*  justify-content: space-evenly */
+    align-items: center;
+    justify-content: center;
+    }
+.copy2{
+        display: none;
+    }
+
+    @media (max-width: 824px) {
     .nav__menu {
       display: none;
     }
@@ -85,4 +273,29 @@ main{
     .centrado{
         font-size: 1rem;
     }
-  }
+    .textoapp{
+        height: 40%;
+        overflow: scroll;
+        padding-bottom: 50px;
+    }
+    .copy{
+        display: none;
+    }
+    .copy2{
+        font-size: 12px;
+        display: inline;
+        text-align: center;
+    }
+    .footer1{
+        justify-content: space-around;
+        padding: 0 0 20px 20%; 
+    }
+    .socmob{
+        display: inline;
+    }
+    .footer2{
+        justify-content: center;
+        padding: 0 0 20px 20%;
+    }
+}
+
