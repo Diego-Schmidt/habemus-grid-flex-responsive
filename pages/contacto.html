@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <title>Habemus Papa! Contacto</title>
+</head>
+<body>
+    <header class="cabeza">
+        <div class="header">
+            <a href="../index.html">
+            <img class="logo-left" src="../assets/logo-header.png" alt="logohabemuspapa">
+            </a>
+<!-- Menú funcionamiento parcial, solo funciona inicio y contacto -->
+        <!-- Menú funcionamiento parcial, solo funciona inicio y contacto -->
+        <!-- Menú burger no funcional, no nos enseñaron todavía :P -->
+        <div class="burger">
+            <a href="./pages/contacto.html"><img src="../assets/burger.png" alt="burgermenu" />
+            </a>
+        </div>
+        <nav class="menu">
+            <ul class="nav__menu">
+                <li class="nav__links">
+                    <span><a class="nav__links" href="../index.html">
+                        Inicio
+                    </a></span>
+                </li>
+                    <div class="nav__links">
+                        <span><a href="#">
+                        Menú
+                    </a></span>
+                    </div>
+                </li>
+                <li class="nav__links">
+                    <span><a href="#">
+                        Servicios
+                    </a></span>
+                </li>
+                <li class="nav__links">
+                    <span><a href="#">
+                        Acerca de
+                    </a></span>
+                </li>
+                <li class="nav__links">
+                    <span><a class="nav__links" href="contacto.html">
+                        Contacto
+                    </a></span>
+                </li>
+                
+            </ul>
+        </nav>
+        <div class="nav__social">
+            <img id="" src="../assets/whatsapp_black_24dp.svg" alt="nuestrowhatsapp" heigth=""/><img src="../assets/live_help_black_24dp.svg" alt="ayuda" heigth=""/>
+        </div>    
+    </div>
+    </header>
+    <main>
+        <section class="contacto">
+            <section>
+                <!-- Formulario de contacto - no funcional basado en https://www.freecontactform.com/form-guides/html-email-form-->
+                <div class="formulario-body">
+                
+                    <div id="formulario-form">
+                    <h3 class="formulario-h3">Envíenos sus comentarios</h3>
+                
+                    <form id="formulario-form-id" class="formulario-form-class" method="post" action="contact-form-process.php">
+                        
+                        <div class="formulario-form-group">
+                            <label for="Name" class="formulario-label">Su nombre</label>
+                            <div class="formulario-input-group">
+                                <input type="text" id="Name" name="Name" class="formulario-form-control" required>
+                            </div>
+                        </div>
+                
+                        <div class="formulario-form-group">
+                            <label for="Email" class="formulario-label">Su email</label>
+                            <div class="formulario-input-group">
+                                <input type="email" id="Email" name="Email" class="formulario-form-control" required>
+                            </div>
+                        </div>
+                
+                        <div class="formulario-form-group">
+                            <label for="Message" class="formulario-label">Mensaje</label>
+                            <div class="formulario-input-group">
+                                <textarea id="Message" name="Message" class="formulario-form-control" rows="6" maxlength="3000" required></textarea>
+                            </div>
+                        </div>
+                
+                        <div class="formulario-form-group">
+                            <button type="submit" id="formulario-button" class="formulario-btn formulario-btn-primary formulario-btn-lg formulario-btn-block">Enviar mensaje</button>
+                        </div>
+                
+                        <div class="formulario-credit" id="formulario-credit">
+                        Le responderemos lo antes posible
+                        </div>
+                
+                    </form>
+                    </div>
+                
+                </div>
+            
+    </main>
+    <!-- Footer con grid -->
+    <footer class="footer">
+            <div class="footer1">
+                <nav class="menu">
+                    <ul class="nav__menu">
+                        <li class="nav__links">
+                                <a href="index.html">
+                                Inicio
+                                </a>
+                        </li>
+                            <div class="nav__links">
+                                <a href="#">
+                                Menú
+                            </a>
+                            </div>
+                        </li>
+                        <li class="nav__links">
+                            <a href="#">
+                                Servicios
+                            </a>
+                        </li>
+                        <li class="nav__links">
+                            <a href="#">
+                                Acerca de
+                            </a>
+                        </li>
+                        <li class="nav__links">
+                            <a href="./pages/contacto.html">
+                                Contacto
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+                <div class="socmob">
+                    <img id="" src="../assets/whatsapp_black_24dp.svg" alt="nuestrowhatsapp" heigth=""/><img src="../assets/live_help_black_24dp.svg" alt="ayuda" heigth=""/>
+                </div>
+            </div>
+            <div class="footer2">
+                <h1 class="copy">Habemus Papa! 2021</h1>
+                <h1 class="copy2">Habemus Papa! 2021</h1>
+            </div>
+    </footer>
+</body>
+</html>
