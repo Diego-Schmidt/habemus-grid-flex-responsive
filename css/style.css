@@ -467,4 +467,7 @@ footer {
     .burger{
         padding-left: -3px;
     }
+    .nav__social{
+        padding-right: 2px;
+    }
 }
