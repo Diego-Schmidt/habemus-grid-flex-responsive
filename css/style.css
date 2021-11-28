@@ -470,4 +470,9 @@ footer {
     .nav__social{
         padding-right: 2px;
     }
+    body{
+        background-attachment: fixed;
+        background-repeat: space;
+        background-size: cover;
+    }
 }
