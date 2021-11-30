@@ -392,7 +392,9 @@ input[type="submit"].formulario-btn-block, input[type="reset"].formulario-btn-bl
   opacity: 0; 
   transform: scale(0.1, 1);
 }
-
+.menumob{
+    display: none;
+}
 /* Definimos al footer como grid */
 
 footer {
@@ -428,11 +430,37 @@ footer {
     }
 
     @media (max-width: 824px) {
+        .menumob{
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: space-around;
+            background-color: rgba(255, 174, 0, 0.6);
+            font-size: 25px;
+            text-align: center;
+            width:100%;
+        }
+        .menumob__li{
+            display: inline-flex;
+            text-decoration: none;
+            padding: 0 10px 0 10px;
+    
+        }
+        .menumob__li:hover{
+            color: seashell;
+        }
+        .menumob__ul{
+            list-style-type: none;
+            display: inline-block;
+        }
+        .menumob a{
+            text-decoration: none;
+        }
     .nav__menu {
       display: none;
     }
     .burger{
-        display: inline-flex;
+        display: none;
     }
     .centrado{
         font-size: 1rem;
@@ -465,10 +493,39 @@ footer {
 }
 @media (max-width: 320px) {
     .burger{
-        padding-left: -3px;
+        display: none;
     }
     .nav__social{
-        padding-right: 2px;
+        display: none;
+    }
+    .logo-left{
+        padding-left: 25px;
+    }
+    .menumob{
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-around;
+        background-color: rgba(255, 174, 0, 0.6);
+        font-size: 22px;
+        text-align: center;
+        width:100%;
+    }
+    .menumob__li{
+        display: inline-flex;
+        text-decoration: none;
+        padding: 0 5px 0 5px;
+
+    }
+    .menumob__li:hover{
+        color: seashell;
+    }
+    .menumob__ul{
+        list-style-type: none;
+        display: inline-block;
+    }
+    .menumob a{
+        text-decoration: none;
     }
     body{
         background-attachment: fixed;
